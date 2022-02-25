@@ -13,6 +13,11 @@ body{
     align-items: center;
     transform: scale(0.8);
 }
+@media screen and (min-width:320px) and (max-width: 500px){
+    body{
+        transform: scale(1);
+    }
+}
 .main-box{
     background-color: #F4F5F5;
     width: 600px;
