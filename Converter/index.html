@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Converter</title>
+</head>
+<body>
+    <!-- Mainbox -->
+    <div class="main-box">
+        <div class="header">
+            <!-- Header Part -->
+            <h1>Metric/Imperial Unit Conversion</h1>
+            <div class="controls-input">
+                <span class="material-icons-outlined" onclick="decrement()">remove</span>
+                <span class="input1"><input id="input1" type="number" min="0"></input></span>
+                <span class="material-icons-outlined" onclick="increment()">add</span>
+            </div>
+            <span  id="submit" onclick="changeValues()">Convert</span>
+        </div>
+        <!-- Unit Conversion -->
+    <div class="length">
+        <h4> Length (Meter/Feet) </h4>
+        <div class="inUnit">
+        <span class="L1"><span class="inputCAll">20 </span>meters = 
+        <span class="Out"> feet</span> </span>
+        <span class="pipe"></span>
+        <span class="L1"><span class="inputCAll">20 </span>feet =
+        <span class="Out"> meters</span></span>
+        </div>
+    </div>
+    <!-- Unit Conversion -->
+    <div class="volume">
+        <h4> Volume (Litres/Gallons) </h4>
+        <div class="inUnit">
+        <span class="L1"><span class="inputCAll">20 </span>litres = 
+        <span class="Out"> gallons</span></span>
+        <span class="pipe"></span>
+        <span class="L1"><span class="inputCAll">20 </span>gallons =
+        <span class="Out"> litres</span></span>
+        </div>
+    </div>
+    <!-- Unit Conversion -->
+    <div class="mass">
+        <h4> Mass (Kilograms/Pounds) </h4>
+        <div class="inUnit">
+        <span class="L1"><span class="inputCAll">20 </span>kilos = 
+        <span class="Out"></span>pounds</span>
+        <span class="pipe"></span>
+        <span class="L1"><span class="inputCAll">20 </span>pounds =
+        <span class="Out"></span>kilos</span>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

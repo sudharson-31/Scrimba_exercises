@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@300;700&display=swap');
+$font :  'Georama', sans-serif;
+html, *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #292D2F;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-box{
+    background-color: #F4F5F5;
+    width: 600px;
+
+}
+.header{
+    width:100%;
+    background: linear-gradient(to right,#ED4880,#F38B17);
+    //padding: 6em 0em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: $font;
+    letter-spacing: 1px;
+    color: #EFF3ED;
+    font-weight: 700;
+    h1{
+       font-family: $font;
+       font-weight: 900;
+        text-align: center;
+        vertical-align: middle;
+        padding: 1.5em 0em 0.8em;
+    }
+    .controls-input{
+        display: flex;
+        width: 100%;
+        justify-content:space-evenly;
+        font-weight: 900;
+        padding: 4em 0em 2em;
+        .input1{
+
+            #input1::-webkit-inner-spin-button, #input1::-webkit-outer-spin-button{
+                -webkit-appearance: none;
+                -moz-appearance: textfield;
+                
+            }
+            #input1{
+               margin: 0;
+                border: none;
+                padding: 0.5em 0em;
+                font-size: 1.2em;
+                text-align: center;
+                color: #ED4880;
+                font-family: $font;
+                font-weight: 700;
+                
+            }
+        }
+       
+        span.material-icons-outlined{
+            cursor: pointer;
+            padding: none;
+            font-size: 36px;
+        }
+        span.material-icons-outlined:hover{
+                color: #6fe3e1;
+        }
+    }
+    #submit{
+     font-size: 1.5em;
+     cursor: pointer;
+     margin-bottom: 1.5em;
+     transition: all 50ms ease;
+    }
+    #submit:hover{
+        color: #6fe3e1;
+        transition: 50ms;
+    }
+   
+}
+
+@media screen and (min-width:320px) and (max-width: 500px){
+    .main-box{
+        width: 80%;
+    }
+    .header{
+        background: linear-gradient(to bottom,#32c4c0,#9fccfa);
+    }
+    h1{
+        font-size: 1rem;
+        padding: 0em 0em 1em;
+    }
+    .controls-input{
+        padding: 0.8em 0em !important;
+        gap: 30px;
+        height: max-content;
+        flex-direction: column-reverse;
+        align-items: center;
+        align-content: space-between;
+        
+}
+span.material-icons-outlined:hover{
+    color: #F38B17 !important;
+}
+#input1{
+    font-size: 1em !important;
+    color: #32c4c0 !important;
+}
+#submit:hover{
+    color: #F38B17 !important;
+}
+}
+
+
+.length, .volume, .mass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    font-family: $font;
+    letter-spacing: 1.5px;
+    font-size: 1.2em;
+    color: #313131;
+    h4{
+        padding-bottom: 2%;
+    }
+}
+.inUnit{
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    font-weight: 300;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+
+}
+
+@media screen and (min-width:320px) and (max-width: 500px){
+.length , .volume, .mass{
+    font-size: 0.9em;
+}
+.inUnit{
+    flex-direction: column;
+    align-items: center;
+    .L1{
+        display: inline-flex;
+        flex-direction: row;
+        padding: 1%;
+    }
+}
+}
+
+
+    
