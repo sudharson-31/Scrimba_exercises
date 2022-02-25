@@ -5,7 +5,9 @@ let screenSize = screen.availWidth;
 let piper = document.getElementsByClassName("pipe");
 let outVals = document.getElementsByClassName('Out');
 inputElement.value = 20;
-
+for(i=0;i<inputCAll.length;i++)
+inputCAll[i].append('\xa0');
+let space = '&nbsp';
 /* convert on keypress enter */
 inputElement.addEventListener("keyup", (event) => {
     if (event.key === 'Enter')
@@ -28,7 +30,7 @@ function increment() {
 
 function changeValues() {
     for (i = 0; i < inputCAll.length; i++)
-        inputCAll[i].textContent = inputElement.value + ' ';
+        inputCAll[i].textContent = inputElement.value + '\xa0';
 
     for (i = 0; i < outVals.length; i++) {
 
