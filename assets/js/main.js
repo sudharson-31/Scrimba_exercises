@@ -4,17 +4,17 @@ let inputCAll = document.getElementsByClassName("inputCAll");
 let screenSize = screen.availWidth;
 let piper = document.getElementsByClassName("pipe");
 let outVals = document.getElementsByClassName('Out');
+inputElement.value = 20;
 
-
-
+/* convert on keypress enter */
 inputElement.addEventListener("keyup", (event) => {
     if (event.key === 'Enter')
         changeValues();
 });
 
-inputElement.value = 20;
 
 
+/* piping based on screen size */
 if (screenSize > 500) {
     for (i = 0; i < piper.length; i++)
         piper[i].append('|');
