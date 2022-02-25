@@ -16,15 +16,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .main-box {
   background-color: #F4F5F5;
   width: 600px;
+  border-radius: 1em;
 }
 
 .header {
   width: 100%;
+  border-radius: 1em 1em 0em 0em;
   background: -webkit-gradient(linear, left top, right top, from(#ED4880), to(#F38B17));
   background: linear-gradient(to right, #ED4880, #F38B17);
   display: -webkit-box;

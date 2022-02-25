@@ -11,14 +11,17 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scale(0.8);
 }
 .main-box{
     background-color: #F4F5F5;
     width: 600px;
+    border-radius: 1em;
 
 }
 .header{
     width:100%;
+    border-radius: 1em 1em 0em 0em;
     background: linear-gradient(to right,#ED4880,#F38B17);
     //padding: 6em 0em;
     display: flex;
