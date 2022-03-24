@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/sass/style.css">
     <title>Converter</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
             <h1>Metric/Imperial Unit Conversion</h1>
             <div class="controls-input">
                 <span class="material-icons-outlined" onclick="decrement()">remove</span>
-                <span class="input1"><input id="input1" type="number" min="0"></input></span>
+                <span class="input1"><input id="input1" type="number" min="0" max="25"></span>
                 <span class="material-icons-outlined" onclick="increment()">add</span>
             </div>
             <span  id="submit" onclick="changeValues()">Convert</span>
@@ -54,7 +54,11 @@
         <span class="Out"> kilos</span></span>
         </div>
     </div>
+    </div>
+    <a href="https://www.flaticon.com/free-icons/calculator" title="calculator icons"></a>
 
-    <script src="assets/js/main.js"></script>
+    <!--div class="calculator"><a href="#"><img src="images/calculator-svgrepo-com.svg"></a></div-->
 </body>
+
+<script src="assets/js/main.js"></script>
 </html>

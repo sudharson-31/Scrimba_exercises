@@ -5,6 +5,8 @@ let screenSize = screen.availWidth;
 let piper = document.getElementsByClassName("pipe");
 let outVals = document.getElementsByClassName('Out');
 inputElement.value = 20;
+let bgimage = document.body.style.backgroundImage;
+bgimage = "url('../../images/Sprinkle.svg')";
 for(i=0;i<inputCAll.length;i++)
 inputCAll[i].append('\xa0');
 let space = '&nbsp';
@@ -13,7 +15,6 @@ inputElement.addEventListener("keyup", (event) => {
     if (event.key === 'Enter')
         changeValues();
 });
-
 
 
 /* piping based on screen size */
@@ -28,6 +29,7 @@ function increment() {
     inputElement.stepUp();
 }
 
+/* changing values in LHS and calculating and displaying output on RHS */
 function changeValues() {
     for (i = 0; i < inputCAll.length; i++)
         inputCAll[i].textContent = inputElement.value + '\xa0';
@@ -50,9 +52,10 @@ function changeValues() {
             case 4:
                 outVals[i].textContent = (inputElement.value * 2.204).toPrecision(3) + ' ' + 'pounds';
                 break;
-            case 3:
+            case 5:
                 outVals[i].textContent = (inputElement.value * 0.453).toPrecision(3) + ' ' + 'kilos';
                 break;
         }
     }
+
 }
