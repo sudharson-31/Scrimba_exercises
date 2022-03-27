@@ -71,9 +71,11 @@ body{
     align-content: space-between;
     row-gap: 20px;
     span{
+        padding: 10px 0px;
         width: 45%;
-        height: 2em;
         background: #273549;
         border-radius: 10px;
+        text-align: center;
+        color: #10B981;
     }
 }
