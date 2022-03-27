@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Karla", sans-serif;
+}
+
+#main-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #111827;
+}
+
+.contentbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 700;
+  padding: 50px 50px;
+}
+
+.contentbox .header {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.contentbox .side-header {
+  font-size: 1em;
+  color: #10B981;
+}
+
+.contentbox .content {
+  padding-top: 8%;
+  font-size: 1.3em;
+  color: #9CA3AF;
+}
+
+#generate {
+  margin: 15% 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  color: #fff;
+  background-color: #10B981;
+  border: none;
+  letter-spacing: 1px;
+  border-radius: 6px;
+}
+
+#generate span {
+  padding: 0px 6px 0px 0px;
+}
+
+.contentbox::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #2F3E53;
+}
+
+.gensPwd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 0px 50px 50px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  row-gap: 20px;
+}
+
+.gensPwd span {
+  padding: 10px 0px;
+  width: 45%;
+  background: #273549;
+  border-radius: 10px;
+  text-align: center;
+  color: #10B981;
+}
+/*# sourceMappingURL=style.css.map */
