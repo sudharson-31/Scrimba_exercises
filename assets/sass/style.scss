@@ -80,6 +80,9 @@ body{
     }
 }
 @media screen and (min-width: 320px) and (max-width: 600px){
+    #main-box{
+        width: 90%;
+    }
     .contentbox{
         padding: 30px 30px;
     }
