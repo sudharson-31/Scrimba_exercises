@@ -79,3 +79,11 @@ body{
         color: #10B981;
     }
 }
+@media screen and (min-width: 320px) and (max-width: 600px){
+    .contentbox{
+        padding: 30px 30px;
+    }
+    .gensPwd{
+        padding: 0px 30px 30px;
+    }
+}
