@@ -21,14 +21,31 @@
             <span class="content">
                 Never use an insecure password again.
             </span>
+            <div class="pwdConstraints">
+                <div class="pwdCharInput">
+                    <input type="number" min="8" max="15" id="pwdCharInput" name="length">
+                </div>
+                <div class="checkboxes">
+                    <div class="alphas">
+                        <label id="capAlphaCheckboxLabel"><input type="checkbox" id="capAlphaCheckbox" class="checkbox">A-Z</label>
+                        <label id="alphaCheckboxLabel"><input type="checkbox" id="alphaCheckbox" class="checkbox">a-z</label>
+                    </div>
+                    <div class="splChars">
+                        <label id="symbolCheckboxLabel"><input type="checkbox" id="symbolCheckbox" class="checkbox">Symbols</label>
+                        <label id="numbersCheckboxLabel"><input type="checkbox" id="numbersCheckbox" class="checkbox">0-9</label>
+                    </div>
+                </div>
+
+            </div>
             <button id="generate" onclick="fillUp()">
                 <span class="material-icons-outlined">
                 bolt
                 </span>
                 Generate Password
             </button>
-
+            
         </div>
+    
         <div class="gensPwd">
             <span class="Fillers">
                abcdefgh
@@ -42,6 +59,19 @@
             <span class="Fillers">
                 abcdefgh
             </span>
+        </div>
+    </div>
+
+
+
+    <div id="modal">
+        <div class="modalContent">
+            <span class="material-icons-outlined" onclick="closeModal()">
+                close
+            </span>
+            <p>
+                Please enter a number between 8 and 15
+            </p>
         </div>
     </div>
 </body>

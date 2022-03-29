@@ -27,6 +27,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #111827;
+  border-radius: 1.25em;
 }
 
 .contentbox {
@@ -57,8 +58,85 @@ body {
   color: #9CA3AF;
 }
 
+.contentbox .pwdConstraints {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 6%;
+  -webkit-column-gap: 10%;
+          column-gap: 10%;
+}
+
+.contentbox .pwdConstraints .pwdCharInput {
+  width: 40%;
+}
+
+.contentbox .pwdConstraints #pwdCharInput {
+  height: 2.2em;
+  font-size: 1em;
+  width: 100%;
+  text-align: center;
+  color: #10B981;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 0.6em;
+}
+
+.contentbox .pwdConstraints #pwdCharInput:active, .contentbox .pwdConstraints #pwdCharInput:focus {
+  outline: none;
+}
+
+.contentbox .pwdConstraints #pwdCharInput::-webkit-inner-spin-button, .contentbox .pwdConstraints #pwdCharInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.contentbox .pwdConstraints .checkboxes {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-column-gap: 20%;
+          column-gap: 20%;
+}
+
+.contentbox .pwdConstraints .checkboxes .alphas, .contentbox .pwdConstraints .checkboxes .splChars {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contentbox .pwdConstraints .checkboxes #alphaCheckbox, .contentbox .pwdConstraints .checkboxes #numbersCheckbox, .contentbox .pwdConstraints .checkboxes #numbersCheckboxLabel, .contentbox .pwdConstraints .checkboxes #alphaCheckboxLabel {
+  justify-self: flex-end;
+}
+
+.contentbox .pwdConstraints .checkboxes label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  color: #9CA3AF;
+}
+
 #generate {
-  margin: 15% 0 10%;
+  margin: 10% 0 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,12 +147,13 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 10px;
+  padding: 10px 20px 10px 10px;
   color: #fff;
   background-color: #10B981;
   border: none;
   letter-spacing: 1px;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 #generate span {
@@ -115,6 +194,40 @@ body {
   border-radius: 10px;
   text-align: center;
   color: #10B981;
+}
+
+#modal {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #27354990;
+}
+
+#modal .modalContent {
+  border-radius: 1.25em;
+  width: 40%;
+  margin: 10% auto;
+  background-color: #10B981;
+  padding: 2%;
+}
+
+#modal span {
+  float: right;
+}
+
+#modal span:hover {
+  cursor: none;
+  color: #fff;
+}
+
+#modal p {
+  font-size: 1.25rem;
+  color: #fff;
+  text-align: center;
+  clear: both;
+  width: 100%;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {

@@ -16,7 +16,7 @@ body{
     display: flex;
     flex-direction: column;
     background: #111827;
-
+    border-radius: 1.25em;
 }
 .contentbox{
     display: flex;
@@ -36,20 +36,69 @@ body{
         font-size: 1.3em;
         color: #9CA3AF;
     }
+    .pwdConstraints{
+        display: flex;
+        //visibility: hidden;
+        flex-direction: row;
+        margin-top: 6%;
+        column-gap: 10%;
+        .pwdCharInput{
+            width: 40%;
+        }
+        #pwdCharInput{
+            height: 2.2em;
+            font-size: 1em;
+            width: 100%;
+            text-align: center;
+            color: #10B981;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 0.6em;
+        }
+        #pwdCharInput:active, #pwdCharInput:focus{
+            outline: none;
+        }
+        #pwdCharInput::-webkit-inner-spin-button,#pwdCharInput::-webkit-outer-spin-button{
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+        }
+        .checkboxes{
+            width: 60%;
+            display: flex;
+            flex-flow: row wrap;
+            column-gap: 20%;
+            .alphas, .splChars{
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+            }
+            #alphaCheckbox, #numbersCheckbox, #numbersCheckboxLabel, #alphaCheckboxLabel{
+                justify-self: flex-end ;
+            }
+            label{
+                display: inline-flex;
+                column-gap: 10px;
+                color: #9CA3AF;
+            }
+        }
+       
+    }
 }
 #generate{
-    margin: 15% 0 10%;
+    margin: 10% 0 10%;
     display: flex;
     align-items: center;
     height: 3em;
     width: fit-content;
-    padding: 10px;
+    padding: 10px 20px 10px 10px;
     color: #fff;
     background-color: #10B981;
     border: none;
     letter-spacing: 1px;
     border-radius: 6px;
-    
+    cursor: pointer;
     span{
         padding: 0px 6px 0px 0px;
     }
@@ -79,6 +128,42 @@ body{
         color: #10B981;
     }
 }
+
+#modal{
+    display: none;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #27354990;
+    //opacity: 0;
+    .modalContent{
+        border-radius: 1.25em;
+        width: 40%;
+        margin: 10% auto;
+        background-color: #10B981;
+        padding: 2%;
+    }
+    span{
+         float: right;
+        
+    }
+    span:hover{
+        cursor:none;
+        color: #fff;
+    }
+    p{
+        font-size: 1.25rem;
+        color: #fff;
+        text-align: center;
+        clear: both;
+        width: 100%;
+    }
+}
+
+
+
+
 @media screen and (min-width: 320px) and (max-width: 600px){
     #main-box{
         width: 90%;
