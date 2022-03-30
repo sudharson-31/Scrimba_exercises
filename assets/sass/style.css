@@ -218,7 +218,7 @@ body {
 }
 
 #modal span:hover {
-  cursor: none;
+  cursor: pointer;
   color: #fff;
 }
 
@@ -239,6 +239,40 @@ body {
   }
   .gensPwd {
     padding: 0px 30px 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  .gensPwd span {
+    width: 100%;
+  }
+  .pwdConstraints {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  .pwdCharInput {
+    width: 100% !important;
+  }
+  #pwdCharInput {
+    width: 100%;
+  }
+  .checkboxes {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-flow: row wrap !important;
+            flex-flow: row wrap !important;
+    width: 100% !important;
+    margin-top: 10%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .modalContent {
+    width: 80% !important;
+    margin: 50% auto !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

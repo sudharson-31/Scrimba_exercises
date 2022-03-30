@@ -149,7 +149,7 @@ body{
         
     }
     span:hover{
-        cursor:none;
+        cursor: pointer;
         color: #fff;
     }
     p{
@@ -173,5 +173,28 @@ body{
     }
     .gensPwd{
         padding: 0px 30px 30px;
+        flex-flow: column wrap;
+        span{
+            width: 100%;
+        }
+    }
+    .pwdConstraints{
+        flex-flow: column wrap ;
+    }
+    .pwdCharInput{
+        width: 100% !important;
+    }
+    #pwdCharInput{
+        width: 100%;
+    }
+    .checkboxes{
+        flex-flow: row wrap !important;
+        width: 100% !important;
+        margin-top: 10%;
+        justify-content: space-evenly;
+    }
+    .modalContent{
+        width: 80% !important;
+        margin: 50% auto !important;
     }
 }
