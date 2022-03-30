@@ -189,7 +189,8 @@ body {
 
 .gensPwd span {
   padding: 10px 0px;
-  width: 45%;
+  min-width: 45%;
+  max-width: 45%;
   background: #273549;
   border-radius: 10px;
   text-align: center;

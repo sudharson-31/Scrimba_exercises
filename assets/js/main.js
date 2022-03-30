@@ -9,6 +9,10 @@ let getVal = (id) =>
     else
     return -1;
 }
+let setVal = (id) =>
+{
+    document.getElementById(id).value = null;
+}
 let checkboxValues = () =>
 {
  let checks = 0b0000;
@@ -93,6 +97,7 @@ function shake(){
 }
 function constraintAlert(){
     var modal =document.getElementById("modal");
+    
     var modalContent = document.getElementsByClassName("modalContent")[0];
     modal.style.display = "block";
 }
@@ -110,4 +115,5 @@ function closeModal() {
         iterations: 1
     });
     setTimeout('modal.style.display = "none";', 200);
+    setTimeout('setVal("pwdCharInput");', 10);
 }
