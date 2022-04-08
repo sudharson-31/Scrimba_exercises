@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+$font: 'Oswald', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#Page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  background: #282D35;
+  font-family: $font;
+  color: white;
+
+}
+.nav{
+    padding: 2%;
+    font-weight: 700;
+    background: #21222A;
+    span{
+        display: inline-flex;
+        align-items: center;
+    }
+    .title{
+        padding-left: 5%;
+        color: #61DAFB;
+
+    }
+}
+.navigation{
+    list-style: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    float: right;
+    line-height: 300%;
+}
+.image{
+    width: 40px;
+    height: 40px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 8%;
+    padding-top: 8%;
+    padding-bottom: 15%;
+    h1{
+        padding-bottom: 2%;
+    }
+    ul{
+        width: max-content;
+        padding-top: 3%;
+        padding-left: 5%;
+        list-style: none;
+    }
+    ul > li{
+       width: max-content;
+        padding: 2%;
+    }
+    ul li::before {
+        content: "\2022";
+        color: #61DAFB;
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em;
+      }
+}
+.footer{
+    position: absolute;
+    text-align: center;
+    color: #21222A;
+    bottom: 0;
+    right: 30%;
+    left: 30%;
+}
