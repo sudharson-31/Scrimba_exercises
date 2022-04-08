@@ -65,22 +65,32 @@ body{
         }
         .checkboxes{
             width: 60%;
-            display: flex;
-            flex-flow: row wrap;
-            column-gap: 20%;
-            .alphas, .splChars{
-                display: inline-flex;
-                flex-direction: column;
-                justify-content: space-between;
-                
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-areas: 
+            "c s e e"
+            "a n e e";
+            #capAlphaCheckbox{
+                grid-area: c;
             }
-            #alphaCheckbox, #numbersCheckbox, #numbersCheckboxLabel, #alphaCheckboxLabel{
-                justify-self: flex-end ;
+            #symbolCheckbox{
+                grid-area: s;
+            }
+            #numbersCheckboxLabel{
+               grid-area: n;
+            }
+             #alphaCheckboxLabel{
+                grid-area: a;
             }
             label{
                 display: inline-flex;
                 column-gap: 10px;
                 color: #9CA3AF;
+            }
+            .enable{
+                grid-area: e;
+                font-size: 3em;
+
             }
         }
        
@@ -190,10 +200,8 @@ body{
         width: 100%;
     }
     .checkboxes{
-        flex-flow: row wrap !important;
         width: 100% !important;
         margin-top: 10%;
-        justify-content: space-evenly;
     }
     .modalContent{
         width: 80% !important;

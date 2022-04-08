@@ -98,32 +98,35 @@ body {
 
 .contentbox .pwdConstraints .checkboxes {
   width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-column-gap: 20%;
-          column-gap: 20%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "c s e e" "a n e e";
 }
 
-.contentbox .pwdConstraints .checkboxes .alphas, .contentbox .pwdConstraints .checkboxes .splChars {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.contentbox .pwdConstraints .checkboxes #capAlphaCheckbox {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: c;
 }
 
-.contentbox .pwdConstraints .checkboxes #alphaCheckbox, .contentbox .pwdConstraints .checkboxes #numbersCheckbox, .contentbox .pwdConstraints .checkboxes #numbersCheckboxLabel, .contentbox .pwdConstraints .checkboxes #alphaCheckboxLabel {
-  justify-self: flex-end;
+.contentbox .pwdConstraints .checkboxes #symbolCheckbox {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: s;
+}
+
+.contentbox .pwdConstraints .checkboxes #numbersCheckboxLabel {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: n;
+}
+
+.contentbox .pwdConstraints .checkboxes #alphaCheckboxLabel {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: a;
 }
 
 .contentbox .pwdConstraints .checkboxes label {
@@ -133,6 +136,15 @@ body {
   -webkit-column-gap: 10px;
           column-gap: 10px;
   color: #9CA3AF;
+}
+
+.contentbox .pwdConstraints .checkboxes .enable {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: e;
+  font-size: 3em;
 }
 
 #generate {
@@ -261,15 +273,8 @@ body {
     width: 100%;
   }
   .checkboxes {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-flow: row wrap !important;
-            flex-flow: row wrap !important;
     width: 100% !important;
     margin-top: 10%;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
   }
   .modalContent {
     width: 80% !important;
