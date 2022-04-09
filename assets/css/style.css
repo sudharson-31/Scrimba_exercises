@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Inter", sans-serif;
+}
+
+.main-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #1A1B21;
+  margin: 10% 0;
+  border-radius: 12px;
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile .profile-dp {
+  width: 100%;
+}
+
+.profile .profile-dp img {
+  width: 350px;
+  height: 320px;
+}
+
+.profile .profile-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile .profile-details #name {
+  color: white;
+  padding-top: 4%;
+  font-weight: 700;
+}
+
+.profile .profile-details #role {
+  color: #F3BF99;
+  padding: 2%;
+  font-size: 0.8em;
+}
+
+.profile .profile-details #website {
+  color: #F5F5F5;
+  padding-bottom: 8%;
+  font-size: 0.7em;
+}
+
+.contact {
+  width: 80%;
+  margin-left: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contact #email {
+  background-color: #FFFFFF;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 12px 32px;
+}
+
+.contact #email img {
+  margin-right: 10px;
+}
+
+.contact #linkedin {
+  background-color: #FFFFFF;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #5093E2;
+  color: white;
+}
+
+.contact #linkedin img {
+  margin-right: 10px;
+}
+
+.contact #linkedin img {
+  vertical-align: middle;
+}
+
+.content {
+  padding: 0 14% 5%;
+  margin-bottom: 10%;
+  width: 265px;
+}
+
+.content h3 {
+  color: #F5F5F5;
+  padding-bottom: 5%;
+  padding-top: 10%;
+}
+
+.content content {
+  font-size: 0.7em;
+  color: #DCDCDC;
+  margin-bottom: 7%;
+}
+
+.footer {
+  background: #161619;
+  padding: 5% 0 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.footer img {
+  margin: 0 5%;
+}
+/*# sourceMappingURL=style.css.map */

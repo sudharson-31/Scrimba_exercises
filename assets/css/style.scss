@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+$font-fam: 'Inter', sans-serif;
+$background-color: #1A1B21;
+@mixin button {
+    background-color: #FFFFFF;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    img{
+        margin-right: 10px;
+    }
+}
+*{
+    margin : 0;
+    padding: 0;
+}
+body{
+    //height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-fam;
+}
+.main-card{
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    margin: 10% 0;
+    border-radius: 12px;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    .profile-dp{
+        width: 100%;
+        img{
+            width: 350px;
+            height: 320px;
+        }
+    }
+    .profile-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #name{
+            color: white;
+            padding-top: 4%;
+            font-weight: 700;
+        }
+        #role{
+            color: #F3BF99;
+            padding: 2%;
+            font-size: 0.8em;
+        }
+        #website{
+            color: #F5F5F5;
+            padding-bottom: 8%;
+            font-size: 0.7em;
+        }
+    }
+
+}
+.contact{
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-around;
+    #email{
+      @include button();
+      padding: 12px 32px;
+    }
+    #linkedin{
+        @include button();
+        background-color: #5093E2;
+        color: white;
+        img{
+            vertical-align: middle;
+        }
+
+    }
+
+}
+.content{
+    padding: 0 14% 5%;
+    margin-bottom: 10%;
+    width: 265px;
+    h3{
+        color: #F5F5F5;
+        padding-bottom: 5%;
+        padding-top: 10%;
+    }
+    content{
+       font-size: 0.7em;
+       color:  #DCDCDC;
+       margin-bottom: 7%;
+    }
+}
+.footer{
+    background: #161619;
+    padding: 5% 0 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    img{
+        margin: 0 5%;
+    }
+}
