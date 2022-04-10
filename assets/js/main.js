@@ -1,4 +1,4 @@
-
+import images from './images'
 function Card(){
     return (
         <div className="main-card">
@@ -13,7 +13,7 @@ function Profile(){
     return (
         <div className="profile">
         <div className="profile-dp">
-            <img src="../../images/Profile_dp.png" alt="Profile picture"></img>
+            <img src="images.profileDp" alt="Profile picture"></img>
         </div>
         <div className="profile-details">
             <h2 id="name">Laura Smith</h2>
