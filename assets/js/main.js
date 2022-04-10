@@ -1,14 +1,6 @@
-//import Images from './images';
+import email from 'images/icons/email.png';
 
-let Images = {
-    profileDp: "../../images/Profile_dp.png",
-    email: "../../images/icons/email.png",
-    linkedin: "../../images/icons/linkedin.png",
-    twitter: "../../images/icons/TwitterIcon.png",
-    facebook:"../../images/icons/FacebookIcon.png",
-    instagram: "../../images/icons/InstagramIcon.png",
-    github: "../../images/icons/GitHubIcon.png"
-}
+
 function Card(){
     return (
         <div className="main-card">
@@ -23,7 +15,7 @@ function Profile(){
     return (
         <div className="profile">
         <div className="profile-dp">
-            <img src= {Images.profileDp} alt="Profile picture"></img>
+            <img src= {email} alt="Profile picture"></img>
         </div>
         <div className="profile-details">
             <h2 id="name">Laura Smith</h2>
