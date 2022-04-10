@@ -1,4 +1,14 @@
-import images from './images'
+//import Images from './images';
+
+let Images = {
+    profileDp: "../../images/Profile_dp.png",
+    email: "../../images/icons/email.png",
+    linkedin: "../../images/icons/linkedin.png",
+    twitter: "../../images/icons/TwitterIcon.png",
+    facebook:"../../images/icons/FacebookIcon.png",
+    instagram: "../../images/icons/InstagramIcon.png",
+    github: "../../images/icons/GitHubIcon.png"
+}
 function Card(){
     return (
         <div className="main-card">
@@ -13,7 +23,7 @@ function Profile(){
     return (
         <div className="profile">
         <div className="profile-dp">
-            <img src="images.profileDp" alt="Profile picture"></img>
+            <img src= {Images.profileDp} alt="Profile picture"></img>
         </div>
         <div className="profile-details">
             <h2 id="name">Laura Smith</h2>
@@ -27,8 +37,8 @@ function Profile(){
 function Contact(){
     return(
         <div className="contact">
-                <button id="email"><img src="../../images/icons/email.png" alt="email"></img>Email</button>
-                <button id="linkedin"><img src="../../images/icons/linkedin.png"></img>LinkedIn</button>
+                <button id="email"><img src={Images.email} alt="email"></img>Email</button>
+                <button id="linkedin"><img src={Images.linkedin}></img>LinkedIn</button>
         </div>
     )
 }
@@ -52,10 +62,10 @@ function Content(){
 function Footer(){
     return(
         <div className="footer">
-            <img src="../../images/icons/TwitterIcon.png" alt="twitter"></img>
-            <img src="../../images/icons/FacebookIcon.png" alt="facebook"></img>
-            <img src="../../images/icons/InstagramIcon.png" alt="instagram"></img>
-            <img src="../../images/icons/GitHubIcon.png" alt="github"></img>
+            <img src={Images.twitter} alt="twitter"></img>
+            <img src={Images.facebook} alt="facebook"></img>
+            <img src= {Images.instagram} alt="instagram"></img>
+            <img src= {Images.github} alt="github"></img>
         </div>
     )
 }

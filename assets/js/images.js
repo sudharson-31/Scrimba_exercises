@@ -1,4 +1,4 @@
-export let images = {
+let Images = {
     profileDp: "../../images/Profile_dp.png",
     email: "../../images/icons/email.png",
     linkedin: "../../images/icons/linkedin.png",
@@ -7,3 +7,5 @@ export let images = {
     instagram: "../../images/icons/InstagramIcon.png",
     github: "../../images/icons/GitHubIcon.png"
 }
+
+export default Images;
