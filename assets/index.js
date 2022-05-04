@@ -42,9 +42,9 @@ function handleClick(id){
     
 }
 function notification(){
+    let snackbar = setTimeout(()=>{notifyElementDOM.style.display="none"},2000);
     notifyElementDOM.textContent = "Item already added!"
     notifyElementDOM.style.display="block"
-    setTimeout(()=>{notifyElementDOM.style.display="none"},2000)
 }
 function createElement(itemService, id){
     
