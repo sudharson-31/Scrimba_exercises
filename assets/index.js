@@ -17,6 +17,7 @@ const items = [
         serviceName: "Pull Weeds",
         price: 30 
     }
+
 ]
 let totalPrice=0;
 let billList = new Set()
@@ -32,8 +33,10 @@ function optionSetter(){
     }
     optionsListDOM.innerHTML += optionString;
 }
-optionSetter()
 
+function onJSLoad(){
+    displayTotal(totalPrice)
+}
 
 function handleClick(id){
     let itemService = items[id].serviceName
@@ -42,9 +45,14 @@ function handleClick(id){
     
 }
 function notification(){
-    let snackbar = setTimeout(()=>{notifyElementDOM.style.display="none"},2000);
-    notifyElementDOM.textContent = "Item already added!"
-    notifyElementDOM.style.display="block"
+    notifyElementDOM.innerHTML = `
+    <span id="snackbar-content">Item already added!<span>
+    `
+    notifyElementDOM.style.display = "flex"
+    setTimeout(()=>{
+        notifyElementDOM.style.display = "none"
+    }
+        , 1000)
 }
 function createElement(itemService, id){
     
@@ -59,8 +67,15 @@ function createElement(itemService, id){
 }
 function displayTotal(price){
     totalPrice += price
-    let item = `<span class="total-price">${totalPrice}</span> `
+    let item = `
+    <span class="total-title">TOTAL AMOUNT</span>
+    <span class="total-price">$${totalPrice}</span> 
+    `
     document.getElementById("total").innerHTML = item
 }
 
 
+
+
+optionSetter()
+onJSLoad()
