@@ -187,4 +187,20 @@ hr {
   width: 20px;
   height: 20px;
 }
+
+#notification {
+  display: none;
+  background-color: #FFFFFF;
+  padding: 1.2%;
+  width: 250px;
+  position: absolute;
+  bottom: 35px;
+  right: 10px;
+  color: #4A4E74;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
 /*# sourceMappingURL=style.css.map */
