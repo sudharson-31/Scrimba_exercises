@@ -102,6 +102,16 @@ body{
         font-size: 1.2em;
         //padding: 4% 0 0;
     }
+    .item-remove{
+        font-size: 0.8em;
+        color: $gray;
+        text-decoration: underline;
+        cursor: pointer;
+        align-self: center;
+    }
+    .item-remove:hover{
+        color: darken($gray, 10);
+    }
     .item-price{
         font-weight: 500;
         font-size: 1.5em;

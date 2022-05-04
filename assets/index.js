@@ -17,7 +17,6 @@ const items = [
         serviceName: "Pull Weeds",
         price: 30 
     }
-
 ]
 let totalPrice=0;
 let billList = new Set()
@@ -40,8 +39,7 @@ function onJSLoad(){
 
 function handleClick(id){
     let itemService = items[id].serviceName
-    
-    billList.has(itemService)? notification():billList.add(itemService) && createElement(itemService, id);
+    billList.has(itemService)? notification():billList.add({serviceName:itemService,price:items[id].price}) && createElement(id);
     
 }
 function notification(){
@@ -54,19 +52,46 @@ function notification(){
     }
         , 1000)
 }
-function createElement(itemService, id){
+function createElement(id){
     
     let item = `<li class="item"> 
-    <span class="item-name">${itemService}</span> 
+    <span class="item-name">${items[id].serviceName}</span> 
+    <span class="item-remove" onclick="removeItem(${id})">remove</span>
     <span class="item-price">
     <span class="dollar">$</span><span class="price">${items[id].price}</span>
     </span> 
     </li> `
     itemsListDOM.innerHTML += item;
-    displayTotal(items[id].price);
+    displayTotal(items[id].price,1);
 }
-function displayTotal(price){
-    totalPrice += price
+console.log(billList[{serviceName:"Mow Lawn"}])
+function removeItem(id){
+    let item = ""
+    itemsListDOM.innerHTML = ""
+    billList.forEach(item => {
+        if(item.serviceName===items[id].serviceName)
+        billList.delete(item)
+    });
+    let list = Array.from(billList)
+    for(let i=0;i<list.length;i++){ 
+        console.log(list[i])
+        item += `<li class="item"> 
+        <span class="item-name">${list[i].serviceName}</span> 
+        <span class="item-remove" onclick="removeItem(${i})">remove</span>
+        <span class="item-price">
+        <span class="dollar">$</span><span class="price">${list[i].price}</span>
+        </span> 
+        </li> `
+    }
+    itemsListDOM.innerHTML += item;
+    displayTotal(items[id].price,0);
+
+    
+
+}
+
+function displayTotal(price,flag){
+    flag?totalPrice += price:totalPrice -= price
     let item = `
     <span class="total-title">TOTAL AMOUNT</span>
     <span class="total-price">$${totalPrice}</span> 

@@ -136,6 +136,20 @@ body {
   font-size: 1.2em;
 }
 
+#items-list .item-remove {
+  font-size: 0.8em;
+  color: #918E9B;
+  text-decoration: underline;
+  cursor: pointer;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#items-list .item-remove:hover {
+  color: #777383;
+}
+
 #items-list .item-price {
   font-weight: 500;
   font-size: 1.5em;
