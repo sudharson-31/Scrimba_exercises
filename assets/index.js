@@ -20,6 +20,7 @@ const items = [
 ]
 let totalPrice=0;
 let billList = new Set()
+let list = new Array()
 let listItem =0;
 function optionSetter(){
     let optionString = ""
@@ -38,8 +39,11 @@ function onJSLoad(){
 }
 
 function handleClick(id){
+    console.log(list)
     let itemService = items[id].serviceName
-    billList.has(itemService)? notification():billList.add({serviceName:itemService,price:items[id].price}) && createElement(id);
+    let item = ""
+    list.includes(itemService)? notification(): ((list[id] = itemService) && (item += renderItem(id)) && (displayTotal(items[id].price,1)))
+    itemsListDOM.innerHTML += item;
     
 }
 function notification(){
@@ -52,43 +56,38 @@ function notification(){
     }
         , 1000)
 }
-function createElement(id){
-    
-    let item = `<li class="item"> 
+function renderItem(id){
+    return `<li class="item"> 
     <span class="item-name">${items[id].serviceName}</span> 
     <span class="item-remove" onclick="removeItem(${id})">remove</span>
     <span class="item-price">
     <span class="dollar">$</span><span class="price">${items[id].price}</span>
     </span> 
     </li> `
-    itemsListDOM.innerHTML += item;
-    displayTotal(items[id].price,1);
+   
 }
-console.log(billList[{serviceName:"Mow Lawn"}])
 function removeItem(id){
     let item = ""
-    itemsListDOM.innerHTML = ""
-    billList.forEach(item => {
-        if(item.serviceName===items[id].serviceName)
-        billList.delete(item)
-    });
-    let list = Array.from(billList)
+    itemsListDOM.innerHTML = "";
+    list[id] = undefined
+    //let list = Array.from(billList)
+    // Commented for reopened Issue #2
+    // billList.forEach(item => {
+    //     if(item.serviceName===items[id].serviceName)
+    //     billList.delete(item)
+    // });
+    // console.log(billList)
+    // let list = Array.from(billList)
     for(let i=0;i<list.length;i++){ 
-        console.log(list[i])
-        item += `<li class="item"> 
-        <span class="item-name">${list[i].serviceName}</span> 
-        <span class="item-remove" onclick="removeItem(${i})">remove</span>
-        <span class="item-price">
-        <span class="dollar">$</span><span class="price">${list[i].price}</span>
-        </span> 
-        </li> `
+        if(list[i]){
+            item  +=  renderItem(i)
+        }
+        
     }
     itemsListDOM.innerHTML += item;
     displayTotal(items[id].price,0);
-
-    
-
 }
+
 
 function displayTotal(price,flag){
     flag?totalPrice += price:totalPrice -= price
