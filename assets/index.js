@@ -17,12 +17,14 @@ const items = [
         serviceName: "Pull Weeds",
         price: 30 
     }
+    //items array of objects
 ]
 let totalPrice=0;
 let billList = new Set()
-let list = new Array()
+let list = new Array() // Item array list
 let listItem =0;
 function optionSetter(){
+    //Setting options using itemsList
     let optionString = ""
     for(i=0;i<items.length;i++){
         optionString += `
@@ -35,10 +37,13 @@ function optionSetter(){
 }
 
 function onJSLoad(){
+    // on page load display 0 total, set options
+    optionSetter()
     displayTotal(totalPrice)
 }
 
 function handleClick(id){
+    //handle when options are clicked
     console.log(list)
     let itemService = items[id].serviceName
     let item = ""
@@ -46,7 +51,9 @@ function handleClick(id){
     itemsListDOM.innerHTML += item;
     
 }
+
 function notification(){
+    //Notify if the element added is duplicate
     notifyElementDOM.innerHTML = `
     <span id="snackbar-content">Item already added!<span>
     `
@@ -57,6 +64,7 @@ function notification(){
         , 1000)
 }
 function renderItem(id){
+    //render the item on screen
     return `<li class="item"> 
     <span class="item-name">${items[id].serviceName}</span> 
     <span class="item-remove" onclick="removeItem(${id})">remove</span>
@@ -67,20 +75,13 @@ function renderItem(id){
    
 }
 function removeItem(id){
+    //remove item from array
     let item = ""
     itemsListDOM.innerHTML = "";
     list[id] = undefined
-    //let list = Array.from(billList)
-    // Commented for reopened Issue #2
-    // billList.forEach(item => {
-    //     if(item.serviceName===items[id].serviceName)
-    //     billList.delete(item)
-    // });
-    // console.log(billList)
-    // let list = Array.from(billList)
     for(let i=0;i<list.length;i++){ 
         if(list[i]){
-            item  +=  renderItem(i)
+            item  +=  renderItem(i) // remove item from screen by overwriting existing items
         }
         
     }
@@ -90,6 +91,7 @@ function removeItem(id){
 
 
 function displayTotal(price,flag){
+    //Display total price
     flag?totalPrice += price:totalPrice -= price
     let item = `
     <span class="total-title">TOTAL AMOUNT</span>
@@ -101,5 +103,5 @@ function displayTotal(price,flag){
 
 
 
-optionSetter()
+
 onJSLoad()
